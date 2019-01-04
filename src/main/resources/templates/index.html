@@ -2,11 +2,1297 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{decorate}">
+      layout:decorate="~{layout}">
 
 <body>
 
-<div class="main-wrapper" layout:fragment="content"></div>
+<div class="main-wrapper" layout:fragment="content">
+
+        <!-- start hero-header -->
+        <div class="hero" style="background-image:url('static/image/hero-header/03.jpg');">
+
+            <div class="container">
+
+                <div class="hero-texting">
+
+                    <!-- Hero heading -->
+                    <h1>Find a place to stay</h1>
+
+                    <!-- Hero subheading -->
+                    <p>More than 100,000 hotels, hostels, apartments and guest houses around the world</p>
+
+                </div>
+
+                <div class="main-search-wrapper">
+
+                    <div class="inner animated">
+
+                        <form class="row gap-20">
+
+                            <div class="col-xs-12 col-sm-12 form-lg">
+
+                                <div class="typeahead-container form-group form-icon-right">
+
+                                    <label class="destination-search-3">Where do you want to go?</label>
+
+                                    <div class="typeahead-field">
+                                        <input id="destination-search-3" name="destination-search-3" type="search" autocomplete="off" class="form-control" placeholder="Try to type: new">
+                                    </div>
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xss-12 col-xs-12 col-sm-5">
+
+                                <div class="row gap-20">
+
+                                    <div class="col-xss-12 col-xs-6 col-sm-6">
+                                        <div class="form-group form-icon-right">
+                                            <label for="dpd1">Check-in</label>
+                                            <input name="dpd1" class="form-control" id="dpd1" placeholder="Check-in" type="text" readonly="">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xss-12 col-xs-6 col-sm-6">
+                                        <div class="form-group form-icon-right">
+                                            <label for="dpd2">Check-out</label>
+                                            <input name="dpd2" class="form-control" id="dpd2" placeholder="Check-out" type="text" readonly="">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xss-12 col-xs-12 col-sm-7">
+
+                                <div class="row gap-20">
+                                    <div class="col-xss-12 col-xs-4 col-sm-4">
+
+                                        <div class="form-group">
+                                            <label>Rooms</label>
+                                            <div class="fancy-select"><select class="custom-select fancified" id="change-search-room" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                                <option value="0">Rooms</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4‎</option>
+                                                <option value="5">5</option>
+                                            </select><div class="form-control">Rooms</div><ul class="options"><li data-raw-value="0" class="selected">Rooms</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xss-12 col-xs-4 col-sm-4">
+
+                                        <div class="form-group">
+                                            <label>Adults</label>
+                                            <div class="fancy-select"><select class="custom-select fancified" id="change-search-adult" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                                <option value="0">Adult</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4‎</option>
+                                                <option value="5">5</option>
+                                            </select><div class="form-control">Adult</div><ul class="options"><li data-raw-value="0" class="selected">Adult</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xss-12 col-xs-4 col-sm-4">
+
+                                        <div class="form-group">
+                                            <label>Children</label>
+                                            <div class="fancy-select"><select class="custom-select fancified" id="change-search-child" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                                <option value="0">Child</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4‎</option>
+                                                <option value="5">5</option>
+                                            </select><div class="form-control">Child</div><ul class="options"><li data-raw-value="0" class="selected">Child</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xs-12">
+
+                                <div class="row">
+
+                                    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
+                                        <button class="btn btn-block btn-primary btn-lg btn-icon">Search <span class="icon"><i class="fa fa-search"></i></span></button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end hero-header -->
+
+        <div class="clear"></div>
+
+        <div class="post-hero">
+
+            <div class="container mb-5">
+
+                <div class="row">
+
+                    <div class="col-sm-4">
+
+                        <div class="featured-item-03 clearfix">
+
+                            <div class="icon">
+                                <i class="et-line-trophy"></i>
+                            </div>
+
+                            <div class="content">
+
+                                <h5>Quality Assured</h5>
+                                <p>So by colonel hearted ferrars. Draw from upon here gone add one. He in sportsman household otherwise.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <div class="featured-item-03 clearfix">
+
+                            <div class="icon">
+                                <i class="et-line-wallet"></i>
+                            </div>
+
+                            <div class="content">
+
+                                <h5>Book Now, Pay Later</h5>
+                                <p>Whatever throwing we on resolved entrance together graceful. Mrs assured add private married removed.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <div class="featured-item-03 clearfix">
+
+                            <div class="icon">
+                                <i class="et-line-heart"></i>
+                            </div>
+
+                            <div class="content">
+
+                                <h5>We Care, You Happy</h5>
+                                <p>Dependent certainty off discovery him his tolerably offending. Ham for attention remainder sometimes.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="container pt-50 pb-60">
+
+            <div class="row">
+
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                    <div class="section-title">
+                        <h2>Top Destinations</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="top-destination-wrapper">
+
+                <div class="GridLex-gap-20-wrapper">
+
+                    <div class="GridLex-grid-noGutter-equalHeight GridLex-grid-center">
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/01.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Dubai</h4>
+                                                <p>Emirate</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/02.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Marrakesh</h4>
+                                                <p>Morocco</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/03.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>London</h4>
+                                                <p>England</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/04.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Montreal</h4>
+                                                <p>Canada</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/05.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Miami</h4>
+                                                <p>USA</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/06.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Rome</h4>
+                                                <p>Italy</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/07.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Paris</h4>
+                                                <p>France</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+
+                            <div class="top-destination-item">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="images/top-destinations/08.jpg" alt="Top Destinations">
+                                    </div>
+                                    <div class="content">
+                                        <div class="row gap-10">
+
+                                            <div class="col-xs-7 place">
+                                                <h4>Tokyo</h4>
+                                                <p>Japan</p>
+                                            </div>
+
+                                            <div class="col-xs-5 price">
+                                                <p>984 hotels</p>
+                                                <p class="icon"><i class="ri ri-chevron-right-circle"></i></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="bg-white pt-50 pb-60">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                        <div class="section-title">
+                            <h2>Popular Accommodations</h2>
+                            <p>Particular unaffected projection sentiments. Mind mrs yet did quit high even you went. Sex against the two however not nothing prudent colonel greater.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="top-hotel-grid-wrapper">
+
+                    <div class="GridLex-gap-20-wrapper">
+
+                        <div class="GridLex-grid-noGutter-equalHeight GridLex-grid-center">
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <div class="bg-primary hotel-tag"><i class="fa fa-tag"></i> Best Price</div>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/01.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Hotel Metropolitan Tokyo</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Excellent
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <div class="bg-danger hotel-tag"><i class="fa fa-trophy"></i> Top Rated</div>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/02.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Phulay Bay Resort</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Phuket, Thailand</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Good
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/03.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>B P International Hotel</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Hong Kong, China</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Wonderful
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/04.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Phulay Bay Resort</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Phuket, Thailand</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Exeptional
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/02.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Phulay Bay Resort</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Phuket, Thailand</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Wonderful
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/01.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Hotel Metropolitan Tokyo</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Wonderful
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/04.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>Phulay Bay Resort</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Phuket, Thailand</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Wonderful
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-3_sm-4_xs-6_xss-12 mb-20">
+
+                                <div class="hotel-item-grid">
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="images/top-destinations/03.jpg" alt="Top Destinations">
+                                        </div>
+                                        <div class="heading">
+                                            <div class="raty-wrapper sp-2 mb-5">
+                                                <div class="star-rating-12px" data-rating-score="4" title="good"><img alt="1" src="images/raty/star-on-sm.png" title="good"><img alt="2" src="images/raty/star-on-sm.png" title="good"><img alt="3" src="images/raty/star-on-sm.png" title="good"><img alt="4" src="images/raty/star-on-sm.png" title="good"><img alt="5" src="images/raty/star-off-sm.png" title="good"><input name="score" type="hidden" value="4" readonly=""></div>
+                                            </div>
+                                            <h4>B P International Hotel</h4>
+                                            <p><i class="fa fa-map-marker text-primary"></i> Hong Kong, China</p>
+                                        </div>
+                                        <div class="content">
+                                            <div class="row gap-5">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="tripadvisor-module">
+                                                        <div class="texting">
+                                                            Wonderful
+                                                        </div>
+                                                        <div class="hover-underline">324 reviews</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <p class="price"><span class="block">start from</span><span class="number">$187</span> / night</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="overflow-hidden">
+
+            <div class="GridLex-grid-noGutter-equalHeight">
+
+                <div class="GridLex-col-6_sm-6_xs-12_xss-12 bg-primary">
+
+                    <div class="sell-or-buy">
+
+                        <div class="icon">
+                            <i class="et-line-briefcase"></i>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="content">
+
+                            <h3 class="uppercase">Traveller</h3>
+
+                            <p>Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. </p>
+
+                            <a href="#">Sign-up</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="GridLex-col-6_sm-6_xs-12_xss-12 bg-warning">
+
+                    <div class="sell-or-buy">
+
+                        <div class="icon">
+                            <i class="et-line-map"></i>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="content">
+
+                            <h3 class="uppercase">Property Owner</h3>
+
+                            <p>Pasture he invited mr company shyness. But when shot real her. Chamber her observe visited removal six sending himself boy. At exquisite existence if an oh dependent excellent.</p>
+
+                            <a href="#">Become a host</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="container pt-50 pb-50">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                        <div class="section-title">
+                            <h2>What people say about us</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                        <div class="slick-gallery-slideshow slick-testimonial-wrapper">
+
+                            <div class="slider gallery-slideshow slick-testimonial slick-initialized slick-slider">
+
+                                <div aria-live="polite" class="slick-list draggable" tabindex="0" style="height: 210px;"><div class="slick-track" style="opacity: 1; width: 6170px; transform: translate3d(-617px, 0px, 0px);"><div class="slick-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Far quitting dwelling graceful the likewise received building. An fact so to that show am shed sold cold. Unaffected remarkably get yet introduced excellence terminated led.
+                                        </p>
+
+                                        <h4 class="uppercase text-warning">James Hogue</h4>
+                                        <p class="he">Utah, USA</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            If we landlord stanhill mr whatever pleasure supplied concerns so. Exquisite by it admitting cordially september newspaper an. Acceptance middletons am it favourable. It it oh happen lovers afraid.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Frank Abagnale</h4>
+                                        <p class="he">New York, USA</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="1" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Sympathize did now preference unpleasing mrs few. Mrs for hour game room want are fond dare. For detract charmed add talking age.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Charles Ponzi</h4>
+                                        <p class="he">Rome, Italy</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="2" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Who connection imprudence middletons too but increasing celebrated principles joy. Herself too improve gay winding ask expense are compact.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Joseph Weil</h4>
+                                        <p class="he">Berlin, German</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="3" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Dashwood contempt on mr unlocked resolved provided of of. Stanhill wondered it it welcomed oh. Hundred no prudent he however smiling at an offence.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Victor Lustig</h4>
+                                        <p class="he">Paris, France</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="4" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Preference imprudence contrasted to remarkably in on. Taken now you him trees tears any. Her object giving end sister except oppose.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">George Parker</h4>
+                                        <p class="he">New York, USA</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="5" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Simplicity end themselves increasing led day sympathize yet. General windows effects not are drawing man garrets. Common indeed garden you his ladies out yet.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Soapy Smith</h4>
+                                        <p class="he">Alaska, USA</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="6" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. Continual say suspicion provision you neglected sir curiosity unwilling.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Eduardo de Valfierno</h4>
+                                        <p class="he">Berlin, German</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide" data-slick-index="7" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            Far quitting dwelling graceful the likewise received building. An fact so to that show am shed sold cold. Unaffected remarkably get yet introduced excellence terminated led.
+                                        </p>
+
+                                        <h4 class="uppercase text-warning">James Hogue</h4>
+                                        <p class="he">Utah, USA</p>
+
+                                    </div>
+
+                                </div><div class="slick-item slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" style="width: 617px;">
+
+                                    <div class="testimonial-long">
+
+                                        <p class="saying">
+                                            If we landlord stanhill mr whatever pleasure supplied concerns so. Exquisite by it admitting cordially september newspaper an. Acceptance middletons am it favourable. It it oh happen lovers afraid.
+                                        </p>
+
+                                        <h4 class="uppercase text-primary">Frank Abagnale</h4>
+                                        <p class="he">New York, USA</p>
+
+                                    </div>
+
+                                </div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="slider gallery-nav slick-testimonial-nav alt slick-initialized slick-slider">
+
+
+
+
+
+
+
+
+
+
+                                <div aria-live="polite" class="slick-list draggable" tabindex="0" style="padding: 0px;"><div class="slick-track" style="opacity: 1; width: 1314px; transform: translate3d(-219px, 0px, 0px);"><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="-4" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/07.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="-3" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/08.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="-2" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/09.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned slick-active" style="width: 73px;" data-slick-index="-1" aria-hidden="false">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/10.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-active slick-center" style="width: 73px;" data-slick-index="0" aria-hidden="false">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/01.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-active" style="width: 73px;" data-slick-index="1" aria-hidden="false">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/02.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="2" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/03.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="3" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/04.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="4" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/05.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="5" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/06.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="6" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/07.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="7" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/08.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="8" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/09.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide" style="width: 73px;" data-slick-index="9" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/10.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned slick-center" style="width: 73px;" data-slick-index="10" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/01.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="11" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/02.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="12" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/03.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div><div class="slick-item slick-slide slick-cloned" style="width: 73px;" data-slick-index="13" aria-hidden="true">
+                                    <div class="testimonial-man">
+                                        <div class="image">
+                                            <img src="images/man/04.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div></div></div><button type="button" data-role="none" class="slick-prev" aria-label="previous" style="display: block;">Previous</button><button type="button" data-role="none" class="slick-next" aria-label="next" style="display: block;">Next</button></div>
+
+                            <div class="clear mb-5"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="bg-white pt-50 pb-60">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                        <div class="section-title">
+                            <h2>Travel Guides &amp; Tips</h2>
+                            <p>Feelings laughing at no wondered repeated provided finished. Possession her thoroughly remarkably terminated man continuing. Can friendly laughter goodness man him appetite.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="recent-post-wrapper">
+
+                    <div class="GridLex-gap-20-wrapper">
+
+                        <div class="GridLex-grid-noGutter-equalHeight GridLex-grid-center">
+
+                            <div class="GridLex-col-6_sm-6_xs-12_xss-12 mb-20">
+
+                                <div class="recent-post">
+
+                                    <div class="image" style="background-image:url('static/image/index/08.jpg');"></div>
+
+                                    <div class="content">
+
+                                        <div class="meta"><i class="fa fa-calendar"></i> <a href="#">Nov 17, 2015</a> <span class="mh-5">|</span> <i class="fa fa-user"></i> <a href="#"> admin</a></div>
+
+                                        <h4>Five Essential Items for Your Next Cruise </h4>
+
+                                        <p>Say ferrars demands besides her address. Blind going you merit few fancy their...</p>
+
+                                        <a href="#" class="btn-read-more">read more <i class="fa fa-long-arrow-right"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-6_sm-6_xs-12_xss-12 mb-20">
+
+                                <div class="recent-post">
+
+                                    <div class="image" style="background-image:url('static/image/index/05.jpg');"></div>
+
+                                    <div class="content">
+
+                                        <div class="meta"><i class="fa fa-calendar"></i> <a href="#">Nov 17, 2015</a> <span class="mh-5">|</span> <i class="fa fa-user"></i> <a href="#"> admin</a></div>
+
+                                        <h4>Family Reunion Planning During the Holidays</h4>
+
+                                        <p>Six started far placing saw respect females old. Civilly why how end viewing...</p>
+
+                                        <a href="#" class="btn-read-more">read more <i class="fa fa-long-arrow-right"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-6_sm-6_xs-12_xss-12 mb-20">
+
+                                <div class="recent-post clearfix">
+
+                                    <div class="image" style="background-image:url('static/image/index/06.jpg');"></div>
+
+                                    <div class="content">
+
+                                        <div class="meta"><i class="fa fa-calendar"></i> <a href="#">Nov 17, 2015</a> <span class="mh-5">|</span> <i class="fa fa-user"></i> <a href="#"> admin</a></div>
+
+                                        <h4>Dental Care While Travel &amp; Dental Tourism</h4>
+
+                                        <p>Man particular insensible celebrated conviction stimulated principles day. Sure fail...</p>
+
+                                        <a href="#" class="btn-read-more">read more <i class="fa fa-long-arrow-right"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="GridLex-col-6_sm-6_xs-12_xss-12 mb-20">
+
+                                <div class="recent-post">
+
+                                    <div class="image" style="background-image:url('static/image/index/07.jpg');"></div>
+
+                                    <div class="content">
+
+                                        <div class="meta"><i class="fa fa-calendar"></i> <a href="#">Nov 17, 2015</a> <span class="mh-5">|</span> <i class="fa fa-user"></i> <a href="#"> admin</a></div>
+
+                                        <h4>Packing Lists - Create Your Own Packing List</h4>
+
+                                        <p>Greatest properly off ham exercise all. Unsatiable invitation its possession nor...</p>
+
+                                        <a href="#" class="btn-read-more">read more <i class="fa fa-long-arrow-right"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="instagram-full-wrapper">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                        <div class="section-title">
+
+                            <p class="p-top">Follow us on</p>
+                            <h4>Instagram <a href="#"><i class="fa fa-at"></i> EXTRETION</a></h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="instagram-wrapper">
+                <div id="instagram" class="instagram"><div class="instagram-placeholder" id="1356665459500371863_3301700665"><a target="_blank" href="https://www.instagram.com/p/BLT2Awoj8-X/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/b03b7fd2c548e231d937cb7c31a3a414/5CD0D9D9/t51.2885-15/e35/s150x150/14488142_1097509250344240_6973282169909149696_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265681679033985281_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmsf9imkB/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/e8d5877e7334208ae2115c2f8cc61fd3/5CC75DF6/t51.2885-15/e35/s150x150/13391202_566586140182739_423562285_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265681506555816186_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmp_VCmj6/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/9d1c506ecd07795cadc24f4e45994bc4/5CD1D98A/t51.2885-15/e35/s150x150/13402405_1589571754668409_305302961_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265681304121927921_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmnCzCmjx/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/f1c4511d7930da7059e077986c74a68d/5CC81E62/t51.2885-15/e35/s150x150/13395139_486948961499563_1166222623_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265681131266271469_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmkh0Cmjt/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/38317519ab6abc97dc8426d13f5d5afd/5CBED374/t51.2885-15/e35/s150x150/13398458_464715297070693_1106701995_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265680671620884706_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmd1vCmji/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/1013668332a1e0e378daf3d62e5c0c42/5CBA4D82/t51.2885-15/e35/s150x150/13285353_589718374541593_2002126472_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265680299510622420_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmYbLimjU/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/fa7ec982a889bd20cca0fd5ebceb0e78/5CD237C2/t51.2885-15/e35/s150x150/13394993_518451505007469_852430179_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265679973395097806_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmTrdimjO/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/a0d286d5d1bc92886f5aec3971fd7d1b/5CD25056/t51.2885-15/e35/s150x150/13297963_495662200629033_1026099123_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265679635418081470_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmOwsimi-/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/17b9c087656d4f86529e77ffed010491/5CC4FB27/t51.2885-15/e35/s150x150/13298232_1632178917103239_272405529_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265679445307058365_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmL_pCmi9/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/8f361f3dd0757977b30c2aaa858d6d7c/5CD4C10E/t51.2885-15/e35/s150x150/13298207_1779130785662828_389327632_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265679189219633336_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmIRJCmi4/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/1663da2e1f469c77f5dbb323cee60f16/5CD88EBF/t51.2885-15/e35/s150x150/13397551_303489739981954_1296827793_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265678877968722089_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQmDvRCmip/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/0f58ed0346be3f7a190754d1d9698070/5CB993C0/t51.2885-15/e35/s150x150/13277541_1770772463155066_1894718226_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265678460509644955_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQl9qeimib/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/d600beb21b39414b26d0004571e2c01d/5CCFCD76/t51.2885-15/e35/s150x150/13298149_1735348993346699_823686942_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265678202803218577_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQl56eCmiR/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/6e5ad46475ae89dd85efe45da4f56ddd/5CCBDB2B/t51.2885-15/e35/s150x150/13381414_1008592985892488_2103292052_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265677993809438858_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGQl231CmiK/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/5161362b923463ffdbdda8a69922b945/5CB848DA/t51.2885-15/e35/s150x150/13388665_1717721228516580_1989424364_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265411211504806536_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGPpMrcimqI/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/72418dae4a160b349bb3afa699f568c1/5CD842B1/t51.2885-15/e35/s150x150/13381359_212774275782830_1904719394_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265410988770486904_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGPpJcAimp4/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/8b1a171a4cb3f2f27700c7e8bb24a3cc/5CD90A9A/t51.2885-15/e35/s150x150/13398357_1174571049272058_496447486_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265410757337180786_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGPpGEeCmpy/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/e86bf51b82a3f2a6349d9da6c1de9ec4/5CCDD014/t51.2885-15/e35/s150x150/13388745_287850071553246_555786938_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265410046822083161_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGPo7uwCmpZ/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/beaac4ada58419c079cde2e3fc248e5e/5CBFDCD0/t51.2885-15/e35/s150x150/13277564_138308536580564_1995337869_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div><div class="instagram-placeholder" id="1265409806916282955_3301700665"><a target="_blank" href="https://www.instagram.com/p/BGPo4PUimpL/"><img class="instagram-image" src="https://scontent.cdninstagram.com/vp/5b688a5a0b73942db6f5b98378481bcd/5CC58EBD/t51.2885-15/e35/s150x150/13298193_1610332719281268_1919008451_n.jpg?_nc_ht=scontent.cdninstagram.com"></a></div></div>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div th:replace="newsletter::newsletter"></div>
+</div>
 
 </body>
 
