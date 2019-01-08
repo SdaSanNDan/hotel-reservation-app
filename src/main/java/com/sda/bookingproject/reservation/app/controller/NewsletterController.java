@@ -31,7 +31,7 @@ public class NewsletterController {
     public ModelAndView insertNewsLetter(@ModelAttribute("email") final String email){
 
         newsletterService.insertNewsletter(email);
-        return new ModelAndView("result").addObject("result", email);
+        return new ModelAndView("index").addObject("newsletter", new NewsletterModel());
     }
 
 }
