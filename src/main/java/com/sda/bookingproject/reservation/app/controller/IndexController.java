@@ -29,7 +29,8 @@ public class IndexController {
     @GetMapping("/search")
     public ModelAndView searchProperty(@ModelAttribute SearchPropertyModel searchPropertyModel){
 
-        return new ModelAndView("result");
+        return new ModelAndView("result")
+                .addObject("searchPropertyModel", new SearchPropertyModel());
     }
 
 //    @GetMapping("/search")

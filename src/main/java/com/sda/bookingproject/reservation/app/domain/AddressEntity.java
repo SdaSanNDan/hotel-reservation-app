@@ -34,7 +34,7 @@ public class AddressEntity {
     private String postalCode;
 
 
-    @ManyToOne(targetEntity = PropertyEntity.class)
-    @JoinColumn(name="propertyId", referencedColumnName = "propertyId")
-    private PropertyEntity property;
+    @OneToOne(targetEntity = RoomEntity.class)
+    @JoinColumn(name = "roomId", referencedColumnName = "roomId")
+    private RoomEntity room;
 }

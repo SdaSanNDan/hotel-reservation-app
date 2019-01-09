@@ -1,11 +1,10 @@
 package com.sda.bookingproject.reservation.app.service;
 
-import com.sda.bookingproject.reservation.app.converter.NewsletterEntityToModelConverter;
+import com.sda.bookingproject.reservation.app.converter.EntityToModelConverter;
 import com.sda.bookingproject.reservation.app.domain.NewsletterEntity;
 import com.sda.bookingproject.reservation.app.model.NewsletterModel;
 import com.sda.bookingproject.reservation.app.repository.NewsLetterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +18,7 @@ public class NewsletterService {
     private NewsLetterRepository newsLetterRepository;
 
     @Autowired
-    private NewsletterEntityToModelConverter newsletterEntityToModelConverter;
+    private EntityToModelConverter newsletterEntityToModelConverter;
 
     public void insertNewsletter(final String email){
 
@@ -40,7 +39,7 @@ public class NewsletterService {
 
         List<NewsletterEntity> newsletterEntities = newsLetterRepository.findAll();
 
-        return newsletterEntities.stream().map(newsletterEntityToModelConverter::toModel).collect(Collectors.toList());
+        return newsletterEntities.stream().map(newsletterEntityToModelConverter::newsletterEntityToModel).collect(Collectors.toList());
     }
 
     public void removeNewsletter(String email) {
@@ -58,7 +57,7 @@ public class NewsletterService {
         Optional<NewsletterEntity> newsletterEntity = newsLetterRepository.findById(id);
         if(newsletterEntity.isPresent()) {
 
-           return newsletterEntityToModelConverter.toModel(newsletterEntity.get());
+           return newsletterEntityToModelConverter.newsletterEntityToModel(newsletterEntity.get());
         }
        return NewsletterModel.builder().build();
     }

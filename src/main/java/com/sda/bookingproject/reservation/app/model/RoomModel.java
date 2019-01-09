@@ -6,23 +6,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddressModel {
-
-    private Long addressId;
-
-    private String country;
-
-    private String city;
-
-    private String street;
-
-    private String postalCode;
-
-    private RoomModel room;
-
+public class RoomModel {
+    private Long roomId;
+    private String roomName;
+    private String includes;
+    private int maximumPerson;
+    private BigDecimal pricePerNight;
     private PropertyModel property;
+
 }

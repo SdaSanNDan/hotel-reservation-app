@@ -9,7 +9,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 <body>
+<div class="main-wrapper" layout:fragment="content">
+<div class="breadcrumb-wrapper">
 
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-8">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Page</a></li>
+                    <li class="active">Feature Items</li>
+                </ol>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 hidden-xs">
+                <p class="hot-line"> <i class="fa fa-phone"></i> Hot Line: 1-222-33658</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 <div class="two-tone-layout left-sidebar">
 
     <div class="equal-content-sidebar">
@@ -25,11 +48,11 @@
 
                         <h3>Search Again</h3>
                         <div class="inner">
-                            <form class="gap-10">
+                            <form class="gap-10" method="get" th:action="@{/search}" th:object="${searchPropertyModel}">
                                 <div class="col-xs-12 col-sm-12">
                                     <div class="form-group form-icon-right mb-10">
                                         <label>Where do you want to go?</label>
-                                        <input type="text" class="form-control mb-0" placeholder="City or Airport">
+                                        <input type="text" class="form-control mb-0" placeholder="City or Airport" th:field="*{destination}">
                                         <i class="fa fa-map-marker"></i>
                                     </div>
                                 </div>
@@ -51,40 +74,43 @@
                                     <div class="form-group">
                                         <label>Rooms</label>
 
-                                        <div class="fancy-select"><select class="custom-select fancified" id="change-search-room" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                        <div class="fancy-select"><select class="custom-select fancified form-control" id="change-search-room" >
                                             <option value="0">Room</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4‎</option>
                                             <option value="5">5</option>
-                                        </select><div class="form-control">Room</div><ul class="options"><li data-raw-value="0" class="selected">Room</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-4">
                                     <div class="form-group">
                                         <label>Adults</label>
-                                        <div class="fancy-select"><select class="custom-select fancified" id="change-search-adult" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                        <div class="fancy-select"><select class="custom-select fancified form-control" id="change-search-adult" >
                                             <option value="0">Adult</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4‎</option>
                                             <option value="5">5</option>
-                                        </select><div class="form-control">Adult</div><ul class="options"><li data-raw-value="0" class="selected">Adult</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-4">
                                     <div class="form-group">
                                         <label>Children</label>
-                                        <div class="fancy-select"><select class="custom-select fancified" id="change-search-child" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                        <div class="fancy-select"><select class="custom-select fancified form-control" id="change-search-child" >
                                             <option value="0">Child</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4‎</option>
                                             <option value="5">5</option>
-                                        </select><div class="form-control">Child</div><ul class="options"><li data-raw-value="0" class="selected">Child</li><li data-raw-value="1">1</li><li data-raw-value="2">2</li><li data-raw-value="3">3</li><li data-raw-value="4">4‎</li><li data-raw-value="5">5</li></ul></div>
+                                        </select>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -102,6 +128,7 @@
                                 <div class="clear"></div>
 
                             </form>
+
                         </div>
                     </div>
 
@@ -114,18 +141,11 @@
                             <div class="another-toggle-content" style="display: block;">
                                 <div class="another-toggle-inner">
                                     <div class="range-slider-wrapper">
-                                        <span class="irs js-irs-0 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: hidden;">$0</span><span class="irs-max" style="visibility: visible;">$2 000</span><span class="irs-from" style="visibility: visible; left: 5.21368%;">$200</span><span class="irs-to" style="visibility: visible; left: 33.6752%;">$800</span><span class="irs-single" style="visibility: hidden; left: 11.9658%;">$200 — $800</span></span><span class="irs-grid" style="width: 94.8718%; left: 2.4641%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -2.35042%;">0</span><span class="irs-grid-pol small" style="left: 20%"></span><span class="irs-grid-pol small" style="left: 15%"></span><span class="irs-grid-pol small" style="left: 10%"></span><span class="irs-grid-pol small" style="left: 5%"></span><span class="irs-grid-pol" style="left: 25%"></span><span class="irs-grid-text js-grid-text-1" style="left: 25%; visibility: visible; margin-left: -4.48718%;">500</span><span class="irs-grid-pol small" style="left: 45%"></span><span class="irs-grid-pol small" style="left: 40%"></span><span class="irs-grid-pol small" style="left: 35%"></span><span class="irs-grid-pol small" style="left: 30%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-2" style="left: 50%; visibility: visible; margin-left: -5.9829%;">1 000</span><span class="irs-grid-pol small" style="left: 70%"></span><span class="irs-grid-pol small" style="left: 65%"></span><span class="irs-grid-pol small" style="left: 60%"></span><span class="irs-grid-pol small" style="left: 55%"></span><span class="irs-grid-pol" style="left: 75%"></span><span class="irs-grid-text js-grid-text-3" style="left: 75%; visibility: visible; margin-left: -5.9829%;">1 500</span><span class="irs-grid-pol small" style="left: 95%"></span><span class="irs-grid-pol small" style="left: 90%"></span><span class="irs-grid-pol small" style="left: 85%"></span><span class="irs-grid-pol small" style="left: 80%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-4" style="left: 100%; margin-left: -5.9829%;">2 000</span></span><span class="irs-bar" style="left: 12.0513%; width: 28.4615%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-slider from" style="left: 9.48718%;"></span><span class="irs-slider to type_last" style="left: 37.9487%;"></span></span><input id="price_range" class="irs-hidden-input" readonly="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="another-toggle filter-toggle">
-                            <h4 class="active">Star Rating</h4>
-                            <div class="another-toggle-content" style="display: block;">
-                                <div class="another-toggle-inner">
-                                    <div class="range-slider-wrapper">
-                                        <span class="irs js-irs-1 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: hidden;">1</span><span class="irs-max" style="visibility: hidden;">5</span><span class="irs-from" style="visibility: visible; left: -0.64102%;">1</span><span class="irs-to" style="visibility: visible; left: 94.0171%;">5</span><span class="irs-single" style="visibility: hidden; left: 42.8419%;">1 — 5</span></span><span class="irs-grid" style="width: 94.8718%; left: 2.4641%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -2.35042%;">1</span><span class="irs-grid-pol small" style="left: 20%"></span><span class="irs-grid-pol small" style="left: 15%"></span><span class="irs-grid-pol small" style="left: 10%"></span><span class="irs-grid-pol small" style="left: 5%"></span><span class="irs-grid-pol" style="left: 25%"></span><span class="irs-grid-text js-grid-text-1" style="left: 25%; visibility: visible; margin-left: -2.35042%;">2</span><span class="irs-grid-pol small" style="left: 45%"></span><span class="irs-grid-pol small" style="left: 40%"></span><span class="irs-grid-pol small" style="left: 35%"></span><span class="irs-grid-pol small" style="left: 30%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-2" style="left: 50%; visibility: visible; margin-left: -2.35042%;">3</span><span class="irs-grid-pol small" style="left: 70%"></span><span class="irs-grid-pol small" style="left: 65%"></span><span class="irs-grid-pol small" style="left: 60%"></span><span class="irs-grid-pol small" style="left: 55%"></span><span class="irs-grid-pol" style="left: 75%"></span><span class="irs-grid-text js-grid-text-3" style="left: 75%; visibility: visible; margin-left: -2.35042%;">4</span><span class="irs-grid-pol small" style="left: 95%"></span><span class="irs-grid-pol small" style="left: 90%"></span><span class="irs-grid-pol small" style="left: 85%"></span><span class="irs-grid-pol small" style="left: 80%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-4" style="left: 100%; margin-left: -2.35042%;">5</span></span><span class="irs-bar" style="left: 2.56411%; width: 94.8718%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-slider from" style="left: 0%;"></span><span class="irs-slider to" style="left: 94.8718%;"></span></span><input id="star_rating_range" class="irs-hidden-input" readonly="">
+                                        <!--<span class="irs js-irs-0 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span>-->
+                                            <!--<span class="irs-min" style="visibility: hidden;">$0</span><span class="irs-max" style="visibility: visible;">$2 000</span><span class="irs-from" style="visibility: visible; left: 5.21368%;">$200</span><span class="irs-to" style="visibility: visible; left: 33.6752%;">$800</span><span class="irs-single" style="visibility: hidden; left: 11.9658%;">$200 — $800</span></span>-->
+                                            <!--<span class="irs-grid" style="width: 94.8718%; left: 2.4641%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -2.35042%;">0</span><span class="irs-grid-pol small" style="left: 20%"></span><span class="irs-grid-pol small" style="left: 15%"></span><span class="irs-grid-pol small" style="left: 10%"></span><span class="irs-grid-pol small" style="left: 5%"></span><span class="irs-grid-pol" style="left: 25%"></span><span class="irs-grid-text js-grid-text-1" style="left: 25%; visibility: visible; margin-left: -4.48718%;">500</span><span class="irs-grid-pol small" style="left: 45%"></span><span class="irs-grid-pol small" style="left: 40%"></span><span class="irs-grid-pol small" style="left: 35%"></span><span class="irs-grid-pol small" style="left: 30%"></span><span class="irs-grid-pol" style="left: 50%"></span><span class="irs-grid-text js-grid-text-2" style="left: 50%; visibility: visible; margin-left: -5.9829%;">1 000</span><span class="irs-grid-pol small" style="left: 70%"></span><span class="irs-grid-pol small" style="left: 65%"></span><span class="irs-grid-pol small" style="left: 60%"></span><span class="irs-grid-pol small" style="left: 55%"></span><span class="irs-grid-pol" style="left: 75%"></span><span class="irs-grid-text js-grid-text-3" style="left: 75%; visibility: visible; margin-left: -5.9829%;">1 500</span><span class="irs-grid-pol small" style="left: 95%"></span><span class="irs-grid-pol small" style="left: 90%"></span><span class="irs-grid-pol small" style="left: 85%"></span><span class="irs-grid-pol small" style="left: 80%"></span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-4" style="left: 100%; margin-left: -5.9829%;">2 000</span></span>-->
+                                            <!--<span class="irs-bar" style="left: 12.0513%; width: 28.4615%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-slider from" style="left: 9.48718%;"></span><span class="irs-slider to type_last" style="left: 37.9487%;"></span></span>-->
+                                        <input id="price_range" class="irs-hidden-input" readonly="">
                                     </div>
                                 </div>
                             </div>
@@ -197,59 +217,6 @@
                         </div>
 
                         <div class="another-toggle filter-toggle">
-                            <h4 class="active">Room Facility</h4>
-                            <div class="another-toggle-content" style="display: block;">
-                                <div class="another-toggle-inner">
-                                    <div class="checkbox-block font-icon-checkbox">
-                                        <input id="filter_facility-1" name="filter_facility" type="checkbox" class="checkbox" checked="checked">
-                                        <label class="" for="filter_facility-1">Any</label>
-                                    </div>
-                                    <div class="checkbox-block font-icon-checkbox">
-                                        <input id="filter_facility-2" name="filter_facility" type="checkbox" class="checkbox">
-                                        <label class="" for="filter_facility-2">Bathtub</label>
-                                    </div>
-                                    <div class="checkbox-block font-icon-checkbox">
-                                        <input id="filter_facility-3" name="filter_facility" type="checkbox" class="checkbox">
-                                        <label class="" for="filter_facility-3">Flat-screen TV</label>
-                                    </div>
-                                    <div class="checkbox-block font-icon-checkbox">
-                                        <input id="filter_facility-4" name="filter_facility" type="checkbox" class="checkbox">
-                                        <label class="" for="filter_facility-4">Kitchen/kitchenette</label>
-                                    </div>
-                                    <div class="checkbox-block font-icon-checkbox">
-                                        <input id="filter_facility-5" name="filter_facility" type="checkbox" class="checkbox">
-                                        <label class="" for="filter_facility-5">Patio</label>
-                                    </div>
-                                    <div id="facility-more-less" class="collapse">
-                                        <div class="inner">
-                                            <div class="checkbox-block font-icon-checkbox">
-                                                <input id="filter_facility-6" name="filter_facility" type="checkbox" class="checkbox">
-                                                <label class="" for="filter_facility-6">Private pool</label>
-                                            </div>
-                                            <div class="checkbox-block font-icon-checkbox">
-                                                <input id="filter_facility-7" name="filter_facility" type="checkbox" class="checkbox">
-                                                <label class="" for="filter_facility-7">Soundproof</label>
-                                            </div>
-                                            <div class="checkbox-block font-icon-checkbox">
-                                                <input id="filter_facility-8" name="filter_facility" type="checkbox" class="checkbox">
-                                                <label class="" for="filter_facility-8">Spa tub</label>
-                                            </div>
-                                            <div class="checkbox-block font-icon-checkbox">
-                                                <input id="filter_facility-9" name="filter_facility" type="checkbox" class="checkbox">
-                                                <label class="" for="filter_facility-9">Terrace </label>
-                                            </div>
-                                            <div class="checkbox-block font-icon-checkbox">
-                                                <input id="filter_facility-10" name="filter_facility" type="checkbox" class="checkbox">
-                                                <label class="" for="filter_facility-10">Washing machine</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-more-less" data-toggle="collapse" data-target="#facility-more-less">Show more</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="another-toggle filter-toggle">
                             <h4 class="active">Radio Filter Widget</h4>
                             <div class="another-toggle-content" style="display: block;">
                                 <div class="another-toggle-inner">
@@ -266,42 +233,6 @@
                                         <input id="radio_block_3" name="radio_block" type="radio" class="radio" value="Third Choice">
                                         <label class="" for="radio_block_3">Bed and Breakfast‎</label>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="another-toggle filter-toggle">
-                            <h4 class="active">Select Filter Widget</h4>
-                            <div class="another-toggle-content" style="display: block;">
-                                <div class="another-toggle-inner">
-                                    <div class="form-group mb-0">
-                                        <div class="fancy-select"><select class="custom-select fancified" id="gender" style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
-                                            <option value="0">Please Select</option>
-                                            <option value="1">Family-friendly‎</option>
-                                            <option value="2">Romantic‎</option>
-                                            <option value="3">Shopping‎</option>
-                                            <option value="4">Spa Hotel‎</option>
-                                            <option value="5">Luxury‎</option>
-                                        </select><div class="form-control">Please Select</div><ul class="options"><li data-raw-value="0" class="selected">Please Select</li><li data-raw-value="1">Family-friendly‎</li><li data-raw-value="2">Romantic‎</li><li data-raw-value="3">Shopping‎</li><li data-raw-value="4">Spa Hotel‎</li><li data-raw-value="5">Luxury‎</li></ul></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="another-toggle filter-toggle">
-                            <h4 class="">Inactive Toggle</h4>
-                            <div class="another-toggle-content">
-                                <div class="another-toggle-inner">
-                                    <p>Affronting imprudence do he he everything. Sex lasted dinner wanted indeed wished out law. Far advanced settling say finished raillery. Offered chiefly farther of my no colonel shyness. Such on help ye some door if in. Laughter proposal laughing any son law consider. Needed except up piqued an.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="another-toggle filter-toggle">
-                            <h4 class="">Inactive Toggle 2</h4>
-                            <div class="another-toggle-content">
-                                <div class="another-toggle-inner">
-                                    <p>Affronting imprudence do he he everything. Sex lasted dinner wanted indeed wished out law. Far advanced settling say finished raillery. Offered chiefly farther of my no colonel shyness. Such on help ye some door if in. Laughter proposal laughing any son law consider. Needed except up piqued an.</p>
                                 </div>
                             </div>
                         </div>
@@ -323,9 +254,9 @@
 
                     <p>We found <span class="text-primary font700">256</span> hotels with availability in <span class="text-primary font700">Paris</span>. Showing 1 - 30</p>
 
-                    <a href="result-map.html" class="show-on-map" style="background-image:url('images/show-on-map.gif');">
+                    <a href="result-map.html" class="show-on-map" th:style="'background-image:url('+ @{images/show-on-map.gif} +');'">
 									<span>
-										<img src="images/show-map-marker.png" alt="images" class="block">
+										<img th:src="@{image/show-map-marker.png}" alt="images" class="block">
 										<span class="bg-primary absolute">Show on map</span>
 									</span>
                     </a>
@@ -339,16 +270,7 @@
                         <li class="text">Sort by: </li>
                         <li class="active"><a href="#">Price <i class="fa fa-long-arrow-up"></i></a></li>
                         <li><a href="#">Name</a></li>
-                        <li><a href="#">Rating</a></li>
-                        <li class="dropdown">
-                            <a id="area-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Area <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="area-dropdown">
-                                <li><a href="#">Downtown</a></li>
-                                <li><a href="#">City Center</a></li>
-                                <li><a href="#">China Town</a></li>
-                            </ul>
-                        </li>
+
                         <li class="list-grid"><a href="result-page-list.html"><i class="fa fa-align-justify"></i></a></li>
                         <li class="list-grid active"><a href="result-page-grid.html"><i class="fa fa-th-large"></i></a></li>
                     </ul>
@@ -358,11 +280,11 @@
                 <div class="hotel-item-list-wrapper mb-40">
 
                     <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/01.jpg');"></div>
+                        <div class="image" th:syle="'background-image:url('+ @{images/top-destinations/01.jpg}+');'"></div>
                         <div class="content">
                             <div class="heading">
                                 <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
+                                <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
                             </div>
                             <div class="short-info">
                                 Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
@@ -387,249 +309,6 @@
                         </div>
                     </div>
 
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/02.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Phulay Bay Resort</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Phuket, Thailand</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/03.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Very Good
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/04.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="text-danger font700 mb-5">Last 2 rooms</p>
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/05.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/06.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="text-danger font700 mb-5">Last 2 rooms</p>
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/07.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="text-danger font700 mb-5">Last 2 rooms</p>
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/08.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="text-danger font700 mb-5">Last 2 rooms</p>
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hotel-item-list">
-                        <div class="image" style="background-image:url('images/top-destinations/09.jpg');"></div>
-                        <div class="content">
-                            <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <p><span class="star-rate rated-40 mr-10"></span> <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
-                            </div>
-                            <div class="short-info">
-                                Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
-                            </div>
-                        </div>
-                        <div class="absolute-bottom">
-                            <p class="text-primary"><i class="fa fa-check-circle"></i> Breakfast Included <span class="mh-10">|</span> <i class="fa fa-check-circle"></i> Free Wifi in Room</p>
-                        </div>
-                        <div class="absolute-right">
-                            <div class="meta-option">
-                                <a href="#" class="tripadvisor-module">
-                                    <div class="texting">
-                                        Excellent
-                                    </div>
-                                    <div class="hover-underline">(324 reviews)</div>
-                                </a>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="price"><span class="block">start from</span><span class="number">$187</span> <span class="block">avg / night</span></p>
-                                <a href="#" class="btn btn-danger btn-sm">Details</a>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -668,6 +347,7 @@
 
     </div>
 
+</div>
 </div>
 
 </body>

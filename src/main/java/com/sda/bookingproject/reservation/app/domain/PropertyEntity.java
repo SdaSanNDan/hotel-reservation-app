@@ -43,8 +43,13 @@ public class PropertyEntity {
     @Column(precision = 10, scale = 2)
     private BigDecimal startsFrom;
 
-    @BatchSize(size = 10)
-    @OneToMany(targetEntity = AddressEntity.class, mappedBy = "property", cascade = CascadeType.ALL)
-    private List<AddressEntity> addressEntities;
+    @Column
+    private String amenities;
+
+    @Column(length = 2048)
+    private String description;
+
+    @OneToMany(targetEntity = RoomEntity.class, mappedBy = "property", cascade = CascadeType.ALL)
+    private List<RoomEntity> rooms;
 
 }
