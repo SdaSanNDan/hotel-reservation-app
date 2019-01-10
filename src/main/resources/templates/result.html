@@ -277,16 +277,16 @@
 
                 </div>
 
-                <div class="hotel-item-list-wrapper mb-40">
+                <div class="hotel-item-list-wrapper mb-40" th:each="propertyModel :${propertyModelPage.getContent()}">
 
                     <div class="hotel-item-list">
                         <div class="image" th:syle="'background-image:url('+ @{images/top-destinations/01.jpg}+');'"></div>
                         <div class="content">
                             <div class="heading">
-                                <h4>Hotel Metropolitan Tokyo</h4>
-                                <i class="fa fa-map-marker text-primary"></i> Tokyo, Japan</p>
+                                <h4 th:text="${propertyModel.propertyName}"></h4>
+                                <p th:text="${propertyModel.addresses.get(0).country} + ' , ' + ${propertyModel.addresses.get(0).city}"><i class="fa fa-map-marker text-primary"></i></p>
                             </div>
-                            <div class="short-info">
+                            <div th:text="${#strings.substring(propertyModel.propertyDescription,0,100)}" class="short-info">
                                 Use securing confined his shutters. Delightful as he it acceptance an solicitude discretion reasonably. Carriage we husbands advanced an perceive greatest expense on demesne ye he.
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 package com.sda.bookingproject.reservation.app.service;
 
-import com.sda.bookingproject.reservation.app.converter.EntityToModelConverter;
+import com.sda.bookingproject.reservation.app.converter.SimpleEntityToModelConverter;
 import com.sda.bookingproject.reservation.app.domain.NewsletterEntity;
 import com.sda.bookingproject.reservation.app.model.NewsletterModel;
 import com.sda.bookingproject.reservation.app.repository.NewsLetterRepository;
@@ -18,7 +18,7 @@ public class NewsletterService {
     private NewsLetterRepository newsLetterRepository;
 
     @Autowired
-    private EntityToModelConverter newsletterEntityToModelConverter;
+    private SimpleEntityToModelConverter newsletterEntityToModelConverter;
 
     public void insertNewsletter(final String email){
 

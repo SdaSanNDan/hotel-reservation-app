@@ -1,6 +1,6 @@
 package com.sda.bookingproject.reservation.app.service;
 
-import com.sda.bookingproject.reservation.app.converter.EntityToModelConverter;
+import com.sda.bookingproject.reservation.app.converter.SimpleEntityToModelConverter;
 import com.sda.bookingproject.reservation.app.domain.AddressEntity;
 import com.sda.bookingproject.reservation.app.model.PropertyModel;
 import com.sda.bookingproject.reservation.app.model.SearchPropertyModel;
@@ -22,7 +22,7 @@ public class PropertyService {
     private PropertyRepository propertyRepository;
 
     @Autowired
-    private EntityToModelConverter entityToModelConverter;
+    private SimpleEntityToModelConverter entityToModelConverter;
 
     @Autowired
     private CustomPropertyRepository customPropertyRepository;

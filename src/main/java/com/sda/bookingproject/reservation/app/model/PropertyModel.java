@@ -32,4 +32,6 @@ public class PropertyModel {
 
     private List<RoomModel> rooms = new ArrayList();
 
+    private List<String> amenities;
+
 }
